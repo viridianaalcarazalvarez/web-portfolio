@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Portfolio | Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">viridiana alcaraz alvarez</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a class="active" href="index.html">Home</a>
+          <a href="bio.html">Bio</a>
+          <a href="statement.html">Artist Statement</a>
+          <a href="cv.html">CV</a>
+          <a href="artworks.html">Artworks</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Artist Portfolio</h1>
+        <p>
+          Welcome to my practice. This site highlights selected works, my
+          background, and the ideas that guide my studio process.
+        </p>
+        <p class="muted">
+          Replace this text with your own intro and update each section with
+          your work.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>About the Work</h3>
+          <p>
+            Explore process, influences, and exhibition history through the Bio
+            and Artist Statement pages.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Featured Artworks</h3>
+          <p>
+            Visit the Artworks page for selected projects and a short
+            description of each piece.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Professional CV</h3>
+          <p>
+            See residencies, exhibitions, education, and publications in a
+            concise format.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© <span id="year"></span> viridiana alcaraz alvarez</div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

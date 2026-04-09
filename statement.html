@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Portfolio | Artist Statement</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">viridiana alcaraz alvarez</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="bio.html">Bio</a>
+          <a class="active" href="statement.html">Artist Statement</a>
+          <a href="cv.html">CV</a>
+          <a href="artworks.html">Artworks</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h1>Artist Statement</h1>
+        <p>
+          My work begins with found materials, photographs, and small gestures
+          of repetition. I build visual layers that shift between abstraction
+          and fragments of landscape, inviting viewers to slow down and notice
+          subtle traces of time.
+        </p>
+        <p>
+          Through paint, collage, and hand-altered surfaces, I treat the studio
+          as a site of translation: memory becomes texture, and observation
+          becomes form. I am interested in how places carry emotional residue
+          and how images can hold both clarity and uncertainty at once.
+        </p>
+        <p class="muted">
+          Replace this text with your own artistic intent, process, and themes.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© <span id="year"></span> viridiana alcaraz alvarez</div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

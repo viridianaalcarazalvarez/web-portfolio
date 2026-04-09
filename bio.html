@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Portfolio | Bio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">viridiana alcaraz alvarez</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a class="active" href="bio.html">Bio</a>
+          <a href="statement.html">Artist Statement</a>
+          <a href="cv.html">CV</a>
+          <a href="artworks.html">Artworks</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h1>Bio</h1>
+        <p>
+          Viridiana Alcaraz Alvarez, born 2000, is a Bay Area based
+digital media artist. Initially, creating through traditional
+painting, Viridiana blends this tactile process within the
+digital world. One of her primary goals is to challenge the
+notion that digital art is sterile or lifeless. She showcases
+humanity behind the screen—that the digital space, like the
+physical, can carry warmth, emotion, and connection. You will
+find personal memories intertwined with cultural references,
+symbols, characters and text to create a dialogue between the
+past and present. Viridiana uses the digital space as a
+storage port that holds memories of childhood and loss.
+        </p>
+        <p>
+          Viridiana is currently studying at San Jose State University and will be receiving a BFA in Digital Media Art.
+        </p>
+      
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© <span id="year"></span> viridiana alcaraz alvarez</div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

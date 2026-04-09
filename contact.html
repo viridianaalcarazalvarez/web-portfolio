@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Portfolio | Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">viridiana alcaraz alvarez</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="bio.html">Bio</a>
+          <a href="statement.html">Artist Statement</a>
+          <a href="cv.html">CV</a>
+          <a href="artworks.html">Artworks</a>
+          <a class="active" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h1>Contact</h1>
+        <p>
+          For commissions, exhibitions, or collaborations, please get in touch:
+        </p>
+        <ul class="list">
+          <li>Email: <a href="mailto:viris.alcaraz@gmail.com">viris.alcaraz@gmail.com</a></li>
+          <li>Instagram: <a href="https://instagram.com" target="_blank" rel="noreferrer">@boy.s</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© <span id="year"></span> viridiana alcaraz alvarez</div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

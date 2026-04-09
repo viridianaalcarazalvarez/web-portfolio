@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Portfolio | Artworks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">viridiana alcaraz alvarez</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="bio.html">Bio</a>
+          <a href="statement.html">Artist Statement</a>
+          <a href="cv.html">CV</a>
+          <a class="active" href="artworks.html">Artworks</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h1>Selected Artworks</h1>
+        <p class="muted">
+          Replace placeholders with real images and descriptions.
+        </p>
+
+        <div class="artwork-grid">
+          <article class="artwork">
+            <div class="artwork-thumb" aria-hidden="true"></div>
+            <div class="artwork-copy">
+              <h3>lovely cloud, 2023</h3>
+              <p class="muted">Digital video</p>
+              <p>
+                Short description of concept, process, or exhibition context.
+              </p>
+            </div>
+          </article>
+
+          <article class="artwork">
+            <div class="artwork-thumb" aria-hidden="true"></div>
+            <div class="artwork-copy">
+              <h3>Work Title II</h3>
+              <p class="muted">2024, Mixed media, 30 x 40 in</p>
+              <p>
+                Add a concise note about materials and thematic focus.
+              </p>
+            </div>
+          </article>
+
+          <article class="artwork">
+            <div class="artwork-thumb" aria-hidden="true"></div>
+            <div class="artwork-copy">
+              <h3>Work Title III</h3>
+              <p class="muted">2023, Installation view</p>
+              <p>
+                Include context such as venue, series name, or collaborators.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© <span id="year"></span> viridiana alcaraz alvarez</div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
