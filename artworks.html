@@ -12,10 +12,20 @@
         <a class="brand" href="index.html">viridiana alcaraz alvarez</a>
         <nav class="nav" aria-label="Main navigation">
           <a href="index.html">Home</a>
-          <a href="bio.html">Bio</a>
-          <a href="statement.html">Artist Statement</a>
+          <div class="nav-dropdown">
+            <a class="nav-dropdown-toggle" href="bio.html">Bio</a>
+            <div class="nav-dropdown-menu">
+              <a href="statement.html">Artist Statement</a>
+            </div>
+          </div>
           <a href="cv.html">CV</a>
-          <a class="active" href="artworks.html">Artworks</a>
+          <div class="nav-dropdown">
+            <a class="active nav-dropdown-toggle" href="artworks.html">Artworks</a>
+            <div class="nav-dropdown-menu">
+              <a href="artworks.html#painting">Painting</a>
+              <a href="artworks.html#video">Video</a>
+            </div>
+          </div>
           <a href="contact.html">Contact</a>
         </nav>
       </div>
@@ -24,18 +34,20 @@
     <main class="container">
       <section>
         <h1>Artworks</h1>
-        <p class="muted">
-          Replace placeholders with real images and descriptions.
-        </p>
-
+        <h2 id="painting">Painting</h2>
         <div class="artwork-grid">
           <article class="artwork">
-            <div class="artwork-thumb" aria-hidden="true"></div>
+            <div class="artwork-thumb">
+              <img
+                src="media/push-towards-the-sun.png"
+                alt="Push Towards the Sun painting"
+              />
+            </div>
             <div class="artwork-copy">
-              <h3>lovely cloud, 2023</h3>
-              <p class="muted">Digital video</p>
+              <h3>Push Towards the Sun</h3>
+              <p class="muted">2025, Acrylic on canvas</p>
               <p>
-                Short description of concept, process, or exhibition context.
+                Push Towards the Sun is a painting that explores positivity, keeping a mindset of growth and hope. It is a reminder to keep on going, even when things feel dark. 
               </p>
             </div>
           </article>
@@ -52,16 +64,22 @@
           </article>
 
           <article class="artwork">
-            <div class="artwork-thumb" aria-hidden="true"></div>
+            <div class="artwork-thumb">
+              <img
+                src="media/recuerdame-siempre.png"
+                alt="Recuerdame siempre painting"
+              />
+            </div>
             <div class="artwork-copy">
-              <h3>Work Title III</h3>
-              <p class="muted">2023, Installation view</p>
+              <h3>Recuerdame siempre, 2024</h3>
+              <p class="muted">Acrylic on canvas</p>
               <p>
                 Include context such as venue, series name, or collaborators.
               </p>
             </div>
           </article>
         </div>
+        <h2 id="video">Video</h2>
       </section>
     </main>
 
