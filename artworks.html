@@ -12,12 +12,8 @@
         <a class="brand" href="index.html">viridiana alcaraz alvarez</a>
         <nav class="nav" aria-label="Main navigation">
           <a href="index.html">Home</a>
-          <div class="nav-dropdown">
-            <a class="nav-dropdown-toggle" href="bio.html">Bio</a>
-            <div class="nav-dropdown-menu">
-              <a href="statement.html">Artist Statement</a>
-            </div>
-          </div>
+          <a href="bio.html">Bio</a>
+          <a href="statement.html">Artist Statement</a>
           <a href="cv.html">CV</a>
           <div class="nav-dropdown">
             <a class="active nav-dropdown-toggle" href="artworks.html">Artworks</a>
@@ -36,7 +32,13 @@
         <h1>Artworks</h1>
         <h2 id="painting">Painting</h2>
         <div class="artwork-grid">
-          <article class="artwork">
+          <article
+            class="artwork artwork--expandable"
+            tabindex="0"
+            aria-haspopup="dialog"
+            aria-controls="artwork-modal"
+            aria-label="Push Towards the Sun. Open larger view."
+          >
             <div class="artwork-thumb">
               <img
                 src="media/push-towards-the-sun.png"
@@ -44,15 +46,26 @@
               />
             </div>
             <div class="artwork-copy">
-              <h3>Push Towards the Sun</h3>
-              <p class="muted">2025, Acrylic on canvas</p>
+              <h3>
+                Push Towards the Sun,
+                <span class="artwork-title-year">2025</span>
+              </h3>
+              <p class="muted">Acrylic on canvas</p>
               <p>
-                Push Towards the Sun is a painting that explores positivity, keeping a mindset of growth and hope. It is a reminder to keep on going, even when things feel dark. 
+                Push Towards the Sun is a painting that explores positivity,
+                keeping a mindset of growth and hope. It is a reminder to keep
+                on going, even when things feel dark.
               </p>
             </div>
           </article>
 
-          <article class="artwork">
+          <article
+            class="artwork artwork--expandable"
+            tabindex="0"
+            aria-haspopup="dialog"
+            aria-controls="artwork-modal"
+            aria-label="Work Title II. Open larger view."
+          >
             <div class="artwork-thumb" aria-hidden="true"></div>
             <div class="artwork-copy">
               <h3>Work Title II</h3>
@@ -63,7 +76,13 @@
             </div>
           </article>
 
-          <article class="artwork">
+          <article
+            class="artwork artwork--expandable"
+            tabindex="0"
+            aria-haspopup="dialog"
+            aria-controls="artwork-modal"
+            aria-label="Recuerdame siempre, 2024. Open larger view."
+          >
             <div class="artwork-thumb">
               <img
                 src="media/recuerdame-siempre.png"
@@ -71,7 +90,10 @@
               />
             </div>
             <div class="artwork-copy">
-              <h3>Recuerdame siempre, 2024</h3>
+              <h3>
+                Recuerdame siempre,
+                <span class="artwork-title-year">2024</span>
+              </h3>
               <p class="muted">Acrylic on canvas</p>
               <p>
                 Include context such as venue, series name, or collaborators.
@@ -79,7 +101,65 @@
             </div>
           </article>
         </div>
+
         <h2 id="video">Video</h2>
+        <div class="artwork-grid">
+          <article
+            class="artwork artwork--expandable"
+            tabindex="0"
+            aria-haspopup="dialog"
+            aria-controls="artwork-modal"
+            aria-label="lovely cloud, 2023. Open larger view."
+            data-modal-vimeo="https://player.vimeo.com/video/828917160?h=a4e0ad591a"
+          >
+            <div class="artwork-thumb">
+              <img
+                src="media/lovely-cloud-cover.png"
+                alt="Still from lovely cloud: figure in a Radio Taxi, 2023"
+              />
+            </div>
+            <div class="artwork-copy">
+              <h3>
+                lovely cloud,
+                <span class="artwork-title-year">2023</span>
+              </h3>
+              <p class="muted">Digital video</p>
+              <p>
+                Lovely Cloud is a stop-motion narrative made from digitized
+                hand-drawn doodles. It gathers small personal moments into a
+                short sequence and uses text from a roughly translated phrase
+                found on an inexpensive phone case—imperfect language as part
+                of the feeling.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="artwork artwork--expandable"
+            tabindex="0"
+            aria-haspopup="dialog"
+            aria-controls="artwork-modal"
+            aria-label="Recuerdame, 2023. Open larger view."
+          >
+            <div class="artwork-thumb" aria-hidden="true"></div>
+            <div class="artwork-copy">
+              <h3>
+                Recuerdame,
+                <span class="artwork-title-year">2023</span>
+              </h3>
+              <p class="muted">Digital video</p>
+              <p>
+                Recuerdame, 2023 features hand-drawn text drawn from poems
+                written by Viridiana's mother during her teenage years,
+                alongside recognizable characters from Mexican popular culture,
+                such as the Bimbo bread bear. While subtle in appearance, the
+                work reflects deeply personal elements of her identity. It
+                incorporates fragments of everyday life—references to family,
+                cultural heritage, and memories she seeks to preserve.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -87,8 +167,138 @@
       <div class="container">© <span id="year"></span> viridiana alcaraz alvarez</div>
     </footer>
 
+    <div class="artwork-modal-shell" id="artwork-modal" hidden>
+      <button
+        type="button"
+        class="artwork-modal-backdrop"
+        aria-label="Close artwork view"
+      ></button>
+      <div
+        class="artwork-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Artwork"
+        tabindex="-1"
+      >
+        <button type="button" class="artwork-modal-close" aria-label="Close">
+          ×
+        </button>
+        <div class="artwork-modal-body" id="artwork-modal-body"></div>
+      </div>
+    </div>
+
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const modal = document.getElementById("artwork-modal");
+      const modalBody = document.getElementById("artwork-modal-body");
+      const modalDialog = modal.querySelector(".artwork-modal-dialog");
+      let lastFocus = null;
+
+      const closeModal = () => {
+        modal.hidden = true;
+        modalBody.innerHTML = "";
+        document.body.classList.remove("artwork-modal-open");
+        document.removeEventListener("keydown", onKeyDown);
+        if (lastFocus && typeof lastFocus.focus === "function") {
+          lastFocus.focus();
+        }
+      };
+
+      const onKeyDown = (e) => {
+        if (e.key === "Escape") {
+          e.preventDefault();
+          closeModal();
+        }
+      };
+
+      const openModal = (card) => {
+        lastFocus = document.activeElement;
+        modalBody.innerHTML = "";
+        const thumb = card.querySelector(".artwork-thumb");
+        const copy = card.querySelector(".artwork-copy");
+        const vimeoSrc = card.dataset.modalVimeo;
+        const videoSrc = card.dataset.modalVideo;
+        let vimeoIframe = null;
+
+        if (vimeoSrc) {
+          const thumbWrap = document.createElement("div");
+          thumbWrap.className = "artwork-thumb artwork-thumb--embed";
+          const wrap = document.createElement("div");
+          wrap.className = "artwork-iframe-wrap";
+          const iframe = document.createElement("iframe");
+          iframe.title = "vimeo-player";
+          iframe.setAttribute("width", "640");
+          iframe.setAttribute("height", "360");
+          iframe.setAttribute("frameborder", "0");
+          iframe.setAttribute(
+            "referrerpolicy",
+            "strict-origin-when-cross-origin"
+          );
+          iframe.setAttribute(
+            "allow",
+            "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          );
+          iframe.setAttribute("allowfullscreen", "");
+          wrap.appendChild(iframe);
+          thumbWrap.appendChild(wrap);
+          modalBody.appendChild(thumbWrap);
+          vimeoIframe = iframe;
+        } else if (videoSrc) {
+          const thumbWrap = document.createElement("div");
+          thumbWrap.className = "artwork-thumb";
+          const video = document.createElement("video");
+          video.controls = true;
+          video.playsInline = true;
+          video.setAttribute("playsinline", "");
+          video.setAttribute("preload", "metadata");
+          const poster = card.dataset.modalPoster;
+          if (poster) video.setAttribute("poster", poster);
+          const source = document.createElement("source");
+          source.src = videoSrc;
+          source.type = "video/mp4";
+          video.appendChild(source);
+          video.appendChild(
+            document.createTextNode("Your browser does not support the video tag.")
+          );
+          thumbWrap.appendChild(video);
+          modalBody.appendChild(thumbWrap);
+        } else if (thumb) {
+          modalBody.appendChild(thumb.cloneNode(true));
+        }
+        if (copy) modalBody.appendChild(copy.cloneNode(true));
+        modalDialog.setAttribute(
+          "aria-label",
+          card.getAttribute("aria-label") || "Artwork"
+        );
+        modal.hidden = false;
+        document.body.classList.add("artwork-modal-open");
+        document.addEventListener("keydown", onKeyDown);
+        modalDialog.focus();
+
+        if (vimeoIframe && vimeoSrc) {
+          requestAnimationFrame(() => {
+            vimeoIframe.src = vimeoSrc;
+          });
+        }
+      };
+
+      modal
+        .querySelector(".artwork-modal-backdrop")
+        .addEventListener("click", closeModal);
+      modal
+        .querySelector(".artwork-modal-close")
+        .addEventListener("click", closeModal);
+
+      document.querySelectorAll(".artwork--expandable").forEach((card) => {
+        card.addEventListener("click", () => openModal(card));
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openModal(card);
+          }
+        });
+      });
     </script>
   </body>
 </html>
