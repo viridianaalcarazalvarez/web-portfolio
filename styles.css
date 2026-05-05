@@ -145,6 +145,12 @@ h2 {
   margin-bottom: 0.8rem;
 }
 
+main h1,
+main h2 {
+  font-weight: 300;
+  color: #959088;
+}
+
 p {
   margin-top: 0;
 }
@@ -260,6 +266,10 @@ p {
 }
 
 #video {
+  margin-top: 2rem;
+}
+
+#net-art {
   margin-top: 2rem;
 }
 
