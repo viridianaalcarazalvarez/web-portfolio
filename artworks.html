@@ -1,313 +1,412 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artist Portfolio | Artworks</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html">viridiana alcaraz alvarez</a>
-        <nav class="nav" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="bio.html">Bio</a>
-          <a href="statement.html">Artist Statement</a>
-          <a href="cv.html">CV</a>
-          <div class="nav-dropdown">
-            <a class="active nav-dropdown-toggle" href="artworks.html">Artworks</a>
-            <div class="nav-dropdown-menu">
-              <a href="artworks.html#painting">Painting</a>
-              <a href="artworks.html#video">Video</a>
-              <a href="artworks.html#net-art">Net Art</a>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artist Portfolio | Artworks</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">viridiana alcaraz alvarez</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="bio.html">Bio</a>
+        <a href="statement.html">Artist Statement</a>
+        <a href="cv.html">CV</a>
+        <div class="nav-dropdown">
+          <a class="active nav-dropdown-toggle" href="artworks.html">Artworks</a>
+          <div class="nav-dropdown-menu">
+            <a href="artworks.html#painting">Painting</a>
+            <a href="artworks.html#video">Video</a>
+            <a href="artworks.html#net-art">Net Art</a>
           </div>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="container">
-      <section>
-        <h1>Artworks</h1>
-        <h2 id="painting">Painting</h2>
-        <div class="artwork-grid">
-          <article
-            class="artwork artwork--expandable"
-            tabindex="0"
-            aria-haspopup="dialog"
-            aria-controls="artwork-modal"
-            aria-label="Push Towards the Sun. Open larger view."
-          >
-            <div class="artwork-thumb">
-              <img
-                src="media/push-towards-the-sun.png"
-                alt="Push Towards the Sun painting"
-              />
-            </div>
-            <div class="artwork-copy">
-              <h3>
-                Push Towards the Sun,
-                <span class="artwork-title-year">2025</span>
-              </h3>
-              <p class="muted">Acrylic on canvas</p>
-              <p>
-                Push Towards the Sun is a painting that explores positivity,
-                keeping a mindset of growth and hope. It is a reminder to keep
-                on going, even when things feel dark.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="artwork artwork--expandable"
-            tabindex="0"
-            aria-haspopup="dialog"
-            aria-controls="artwork-modal"
-            aria-label="Work Title II. Open larger view."
-          >
-            <div class="artwork-thumb" aria-hidden="true"></div>
-            <div class="artwork-copy">
-              <h3>Work Title II</h3>
-              <p class="muted">2024, Mixed media, 30 x 40 in</p>
-              <p>
-                Add a concise note about materials and thematic focus.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="artwork artwork--expandable"
-            tabindex="0"
-            aria-haspopup="dialog"
-            aria-controls="artwork-modal"
-            aria-label="Recuerdame siempre, 2024. Open larger view."
-          >
-            <div class="artwork-thumb">
-              <img
-                src="media/recuerdame-siempre.png"
-                alt="Recuerdame siempre painting"
-              />
-            </div>
-            <div class="artwork-copy">
-              <h3>
-                Recuerdame siempre,
-                <span class="artwork-title-year">2024</span>
-              </h3>
-              <p class="muted">Acrylic on canvas</p>
-              <p>
-                Include context such as venue, series name, or collaborators.
-              </p>
-            </div>
-          </article>
         </div>
-
-        <h2 id="video">Video</h2>
-        <div class="artwork-grid">
-          <article
-            class="artwork artwork--expandable"
-            tabindex="0"
-            aria-haspopup="dialog"
-            aria-controls="artwork-modal"
-            aria-label="lovely cloud, 2023. Open larger view."
-            data-modal-vimeo="https://player.vimeo.com/video/828917160?h=a4e0ad591a"
-          >
-            <div class="artwork-thumb">
-              <img
-                src="media/lovely-cloud-cover.png"
-                alt="Still from lovely cloud: figure in a Radio Taxi, 2023"
-              />
-            </div>
-            <div class="artwork-copy">
-              <h3>
-                lovely cloud,
-                <span class="artwork-title-year">2023</span>
-              </h3>
-              <p class="muted">Digital video</p>
-              <p>
-                Lovely Cloud is a stop-motion narrative made from digitized
-                hand-drawn doodles. It gathers small personal moments into a
-                short sequence and uses text from a roughly translated phrase
-                found on an inexpensive phone case—imperfect language as part
-                of the feeling.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="artwork artwork--expandable"
-            tabindex="0"
-            aria-haspopup="dialog"
-            aria-controls="artwork-modal"
-            aria-label="Recuerdame, 2023. Open larger view."
-          >
-            <div class="artwork-thumb">
-              <img
-                src="media/recuerdame-2023-cover.png"
-                alt="Still from Recuerdame, 2023: thought bubble and hands"
-              />
-            </div>
-            <div class="artwork-copy">
-              <h3>
-                Recuerdame,
-                <span class="artwork-title-year">2023</span>
-              </h3>
-              <p class="muted">Digital video</p>
-              <p>
-                Recuerdame, 2023 features hand-drawn text drawn from poems
-                written by Viridiana's mother during her teenage years,
-                alongside recognizable characters from Mexican popular culture,
-                such as the Bimbo bread bear. While subtle in appearance, the
-                work reflects deeply personal elements of her identity. It
-                incorporates fragments of everyday life—references to family,
-                cultural heritage, and memories she seeks to preserve.
-              </p>
-            </div>
-          </article>
-        </div>
-
-        <h2 id="net-art">Net Art</h2>
-        <div class="artwork-grid"></div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">© <span id="year"></span> viridiana alcaraz alvarez</div>
-    </footer>
-
-    <div class="artwork-modal-shell" id="artwork-modal" hidden>
-      <button
-        type="button"
-        class="artwork-modal-backdrop"
-        aria-label="Close artwork view"
-      ></button>
-      <div
-        class="artwork-modal-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Artwork"
-        tabindex="-1"
-      >
-        <button type="button" class="artwork-modal-close" aria-label="Close">
-          ×
-        </button>
-        <div class="artwork-modal-body" id="artwork-modal-body"></div>
-      </div>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+  <main class="container">
+    <section>
+      <h1>Artworks</h1>
+      <h2 id="painting">Painting</h2>
+      <div class="artwork-grid">
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="Push Towards the Sun. Open larger view.">
+          <div class="artwork-thumb">
+            <img src="media/push-towards-the-sun.png" alt="Push Towards the Sun painting" />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              Push Towards the Sun,
+              <span class="artwork-title-year">2025</span>
+            </h3>
+            <p class="muted">Acrylic on canvas</p>
+            <p>
+              <em>Push Towards the Sun</em> is a painting that explores positivity,
+              keeping a mindset of growth and hope. It is a reminder to keep
+              on going, even when things feel dark.
+            </p>
+          </div>
+        </article>
 
-      const modal = document.getElementById("artwork-modal");
-      const modalBody = document.getElementById("artwork-modal-body");
-      const modalDialog = modal.querySelector(".artwork-modal-dialog");
-      let lastFocus = null;
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="Work Title II. Open larger view.">
+          <div class="artwork-thumb">
+            <img src="media/Untitled-servilletas.png" alt="Untitled servilletas painting" />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              Untitled (servilletas),
+              <span class="artwork-title-year">2025</span>
+            </h3>
+            <p class="muted">Acrylic on canvas</p>
+            <p>
+              This piece is based on a handmade crocheted servilleta my grandmother gave me before she passed. Even as
+              dementia affected her memory, she continued crocheting—her hands moving with quiet persistence. It
+              reflects on what remains when memory fades, and how making can carry a sense of presence, care, and spirit
+              beyond words or recollection.
+            </p>
+          </div>
+        </article>
 
-      const closeModal = () => {
-        modal.hidden = true;
-        modalBody.innerHTML = "";
-        document.body.classList.remove("artwork-modal-open");
-        document.removeEventListener("keydown", onKeyDown);
-        if (lastFocus && typeof lastFocus.focus === "function") {
-          lastFocus.focus();
-        }
-      };
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="Recuerdame siempre, 2024. Open larger view.">
+          <div class="artwork-thumb">
+            <img src="media/recuerdame-siempre.png" alt="Recuerdame siempre painting" />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              Recuerdame siempre,
+              <span class="artwork-title-year">2024</span>
+            </h3>
+            <p class="muted">Acrylic on canvas</p>
+            <p>
+              <em>Recuerdame siempre</em> depicts a portrait of Viridiana's mother layered with a drawing from her
+              teenage years, marked with the words “Remember me forever”. The work reflects on memory and its fragility,
+              and the fear of both
+              forgetting and being forgotten.
+            </p>
+          </div>
+        </article>
 
-      const onKeyDown = (e) => {
-        if (e.key === "Escape") {
-          e.preventDefault();
-          closeModal();
-        }
-      };
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="Time Goes Fast, Love Always #1. Open larger view.">
+          <div class="artwork-thumb">
+            <img
+              src="media/spring.png"
+              alt="Digital painting of a stylized character in a plaid hat with cherry blossoms on a cream background"
+            />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              Time Goes Fast, Love Always #1, 
+              <span class="artwork-title-year">2024</span>
+            </h3>
+            <p class="muted">Digital painting</p>
+            <p>
+              This work is part of a project that culminated in the creation of a calendar, consisting of a series of
+              digital paintings representing the seasons. The calendar is inspired by the long traditional Mexican
+              calendars my family sends my mother each year from Mexico. It reflects on the joy and familiarity my
+              mother feels receiving them, and how that shared gesture of connection resonates across immigrant families
+              and beyond.
 
-      const openModal = (card) => {
-        lastFocus = document.activeElement;
-        modalBody.innerHTML = "";
-        const thumb = card.querySelector(".artwork-thumb");
-        const copy = card.querySelector(".artwork-copy");
-        const vimeoSrc = card.dataset.modalVimeo;
-        const videoSrc = card.dataset.modalVideo;
-        let vimeoIframe = null;
+            </p>
+          </div>
+        </article>
 
-        if (vimeoSrc) {
-          const thumbWrap = document.createElement("div");
-          thumbWrap.className = "artwork-thumb artwork-thumb--embed";
-          const wrap = document.createElement("div");
-          wrap.className = "artwork-iframe-wrap";
-          const iframe = document.createElement("iframe");
-          iframe.title = "vimeo-player";
-          iframe.setAttribute("width", "640");
-          iframe.setAttribute("height", "360");
-          iframe.setAttribute("frameborder", "0");
-          iframe.setAttribute(
-            "referrerpolicy",
-            "strict-origin-when-cross-origin"
-          );
-          iframe.setAttribute(
-            "allow",
-            "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          );
-          iframe.setAttribute("allowfullscreen", "");
-          wrap.appendChild(iframe);
-          thumbWrap.appendChild(wrap);
-          modalBody.appendChild(thumbWrap);
-          vimeoIframe = iframe;
-        } else if (videoSrc) {
-          const thumbWrap = document.createElement("div");
-          thumbWrap.className = "artwork-thumb";
-          const video = document.createElement("video");
-          video.controls = true;
-          video.playsInline = true;
-          video.setAttribute("playsinline", "");
-          video.setAttribute("preload", "metadata");
-          const poster = card.dataset.modalPoster;
-          if (poster) video.setAttribute("poster", poster);
-          const source = document.createElement("source");
-          source.src = videoSrc;
-          source.type = "video/mp4";
-          video.appendChild(source);
-          video.appendChild(
-            document.createTextNode("Your browser does not support the video tag.")
-          );
-          thumbWrap.appendChild(video);
-          modalBody.appendChild(thumbWrap);
-        } else if (thumb) {
-          modalBody.appendChild(thumb.cloneNode(true));
-        }
-        if (copy) modalBody.appendChild(copy.cloneNode(true));
-        modalDialog.setAttribute(
-          "aria-label",
-          card.getAttribute("aria-label") || "Artwork"
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="Time Goes Fast, Love Always #3. Open larger view.">
+          <div class="artwork-thumb">
+            <img
+              src="media/winter.png"
+              alt="Digital painting of a bundled-up character in a plaid hat and scarf looking up at falling snow"
+            />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              Time Goes Fast, Love Always #3,
+              <span class="artwork-title-year">2024</span>
+            </h3>
+            <p class="muted">Digital painting</p>
+            <p>
+              This work is part of a project that culminated in the creation of a calendar, consisting of a series of
+              digital paintings representing the seasons. The calendar is inspired by the long traditional Mexican
+              calendars my family sends my mother each year from Mexico. It reflects on the joy and familiarity my
+              mother feels receiving them, and how that shared gesture of connection resonates across immigrant families
+              and beyond.
+
+            </p>
+          </div>
+        </article>
+
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="Time Goes Fast, Love Always #2. Open larger view.">
+          <div class="artwork-thumb">
+            <img
+              src="media/fall.png"
+              alt="Digital painting of a smiling character in a green beret holding a large autumn maple leaf with falling leaves"
+            />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              Time Goes Fast, Love Always #2,
+              <span class="artwork-title-year">2024</span>
+            </h3>
+            <p class="muted">Digital painting</p>
+            <p>
+              This work is part of a project that culminated in the creation of a calendar, consisting of a series of
+              digital paintings representing the seasons. The calendar is inspired by the long traditional Mexican
+              calendars my family sends my mother each year from Mexico. It reflects on the joy and familiarity my
+              mother feels receiving them, and how that shared gesture of connection resonates across immigrant families
+              and beyond.
+
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <h2 id="video">Video</h2>
+      <div class="artwork-grid">
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="lovely cloud, 2023. Open larger view."
+          data-modal-vimeo="https://player.vimeo.com/video/828917160?h=a4e0ad591a">
+          <div class="artwork-thumb">
+            <img src="media/lovely-cloud-cover.png" alt="Still from lovely cloud: figure in a Radio Taxi, 2023" />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              lovely cloud,
+              <span class="artwork-title-year">2023</span>
+            </h3>
+            <p class="muted">Digital video</p>
+            <p>
+              Lovely Cloud is a stop-motion narrative made from digitized
+              hand-drawn doodles. It gathers small personal moments into a
+              short sequence and uses text from a roughly translated phrase
+              found on an inexpensive phone case—imperfect language as part
+              of the feeling.
+            </p>
+          </div>
+        </article>
+
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="Recuerdame, 2023. Open larger view."
+          data-modal-vimeo="https://player.vimeo.com/video/1061469731?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          data-modal-vimeo-title="Recuerda, 2025">
+          <div class="artwork-thumb">
+            <img src="media/recuerdame-2023-cover.png" alt="Still from Recuerdame, 2023: thought bubble and hands" />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              Recuerdame,
+              <span class="artwork-title-year">2023</span>
+            </h3>
+            <p class="muted">Digital video</p>
+            <p>
+              Recuerdame, 2023 features hand-drawn text drawn from poems
+              written by Viridiana's mother during her teenage years,
+              alongside recognizable characters from Mexican popular culture,
+              such as the Bimbo bread bear. While subtle in appearance, the
+              work reflects deeply personal elements of her identity. It
+              incorporates fragments of everyday life—references to family,
+              cultural heritage, and memories she seeks to preserve.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <h2 id="net-art">Net Art</h2>
+      <div class="artwork-grid">
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="Net Art Work I. Open larger view.">
+          <div class="artwork-thumb">
+            <img src="media/blurred-echoes.png" alt="Blurred Echoes net art thumbnail" />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              Blurred Echoes,
+              <span class="artwork-title-year">2025</span>
+            </h3>
+            <p class="muted">Website</p>
+            <p>
+              Blurred Echoes is an interactive website that presents my memories in an abstract, unreadable form. The
+              work stems from my anxiety about losing memory and watching the experiences that shaped me fade into
+              something unrecognizable. Through hazy images and glowing orbs, it explores the tension between holding on
+              and letting go.
+            </p>
+
+            <p>
+              Click here to view the work: <a href="https://viridianaalcarazalvarez.github.io/my-f1nal4coding/"
+                target="_blank">blurred-echoes</a>
+
+
+            </p>
+          </div>
+        </article>
+
+        <article class="artwork artwork--expandable" tabindex="0" aria-haspopup="dialog" aria-controls="artwork-modal"
+          aria-label="Net Art Work II. Open larger view.">
+          <div class="artwork-thumb">
+            <img src="media/music-memories.png"
+              alt="Digital illustration of a young girl in a pink beret looking upward among soft blurred pastel shapes" />
+          </div>
+          <div class="artwork-copy">
+            <h3>
+              music-memories,
+              <span class="artwork-title-year">2025</span>
+            </h3>
+            <p class="muted">Website</p>
+            <p>
+              Music often reflects who a person is, carrying feelings, memories, and phases of life without needing
+              explanation. My playlists, built over years on Apple Music, trace different periods of my life and are
+              closely tied to memory and personal change. This webpage brings together my drawings and curated playlists
+              as a way to share how music and visual work shape each other in my creative process.
+            <p>
+              Click here to view the work: <a href="https://viridianaalcarazalvarez.github.io/self-data/"
+                target="_blank">music-memories</a>
+
+
+            </p>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> viridiana alcaraz alvarez</div>
+  </footer>
+
+  <div class="artwork-modal-shell" id="artwork-modal" hidden>
+    <button type="button" class="artwork-modal-backdrop" aria-label="Close artwork view"></button>
+    <div class="artwork-modal-dialog" role="dialog" aria-modal="true" aria-label="Artwork" tabindex="-1">
+      <button type="button" class="artwork-modal-close" aria-label="Close">
+        ×
+      </button>
+      <div class="artwork-modal-body" id="artwork-modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const modal = document.getElementById("artwork-modal");
+    const modalBody = document.getElementById("artwork-modal-body");
+    const modalDialog = modal.querySelector(".artwork-modal-dialog");
+    let lastFocus = null;
+
+    const closeModal = () => {
+      modal.hidden = true;
+      modalBody.innerHTML = "";
+      document.body.classList.remove("artwork-modal-open");
+      document.removeEventListener("keydown", onKeyDown);
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        lastFocus.focus();
+      }
+    };
+
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeModal();
+      }
+    };
+
+    const openModal = (card) => {
+      lastFocus = document.activeElement;
+      modalBody.innerHTML = "";
+      const thumb = card.querySelector(".artwork-thumb");
+      const copy = card.querySelector(".artwork-copy");
+      const vimeoSrc = card.dataset.modalVimeo;
+      const videoSrc = card.dataset.modalVideo;
+      let vimeoIframe = null;
+
+      if (vimeoSrc) {
+        const thumbWrap = document.createElement("div");
+        thumbWrap.className = "artwork-thumb artwork-thumb--embed";
+        const wrap = document.createElement("div");
+        wrap.className = "artwork-iframe-wrap";
+        const iframe = document.createElement("iframe");
+        iframe.title =
+          card.dataset.modalVimeoTitle?.trim() || "vimeo-player";
+        iframe.setAttribute("width", "640");
+        iframe.setAttribute("height", "360");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute(
+          "referrerpolicy",
+          "strict-origin-when-cross-origin"
         );
-        modal.hidden = false;
-        document.body.classList.add("artwork-modal-open");
-        document.addEventListener("keydown", onKeyDown);
-        modalDialog.focus();
+        iframe.setAttribute(
+          "allow",
+          "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        );
+        iframe.setAttribute("allowfullscreen", "");
+        wrap.appendChild(iframe);
+        thumbWrap.appendChild(wrap);
+        modalBody.appendChild(thumbWrap);
+        vimeoIframe = iframe;
+      } else if (videoSrc) {
+        const thumbWrap = document.createElement("div");
+        thumbWrap.className = "artwork-thumb";
+        const video = document.createElement("video");
+        video.controls = true;
+        video.playsInline = true;
+        video.setAttribute("playsinline", "");
+        video.setAttribute("preload", "metadata");
+        const poster = card.dataset.modalPoster;
+        if (poster) video.setAttribute("poster", poster);
+        const source = document.createElement("source");
+        source.src = videoSrc;
+        source.type = "video/mp4";
+        video.appendChild(source);
+        video.appendChild(
+          document.createTextNode("Your browser does not support the video tag.")
+        );
+        thumbWrap.appendChild(video);
+        modalBody.appendChild(thumbWrap);
+      } else if (thumb) {
+        modalBody.appendChild(thumb.cloneNode(true));
+      }
+      if (copy) modalBody.appendChild(copy.cloneNode(true));
+      modalDialog.setAttribute(
+        "aria-label",
+        card.getAttribute("aria-label") || "Artwork"
+      );
+      modal.hidden = false;
+      document.body.classList.add("artwork-modal-open");
+      document.addEventListener("keydown", onKeyDown);
+      modalDialog.focus();
 
-        if (vimeoIframe && vimeoSrc) {
-          requestAnimationFrame(() => {
-            vimeoIframe.src = vimeoSrc;
-          });
-        }
-      };
-
-      modal
-        .querySelector(".artwork-modal-backdrop")
-        .addEventListener("click", closeModal);
-      modal
-        .querySelector(".artwork-modal-close")
-        .addEventListener("click", closeModal);
-
-      document.querySelectorAll(".artwork--expandable").forEach((card) => {
-        card.addEventListener("click", () => openModal(card));
-        card.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            openModal(card);
-          }
+      if (vimeoIframe && vimeoSrc) {
+        requestAnimationFrame(() => {
+          vimeoIframe.src = vimeoSrc;
         });
+      }
+    };
+
+    modal
+      .querySelector(".artwork-modal-backdrop")
+      .addEventListener("click", closeModal);
+    modal
+      .querySelector(".artwork-modal-close")
+      .addEventListener("click", closeModal);
+
+    document.querySelectorAll(".artwork--expandable").forEach((card) => {
+      card.addEventListener("click", () => openModal(card));
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openModal(card);
+        }
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
