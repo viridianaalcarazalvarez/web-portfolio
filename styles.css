@@ -12,12 +12,25 @@
   box-sizing: border-box;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
+}
+
+.home-hero-bleed {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -119,7 +132,11 @@ a {
 }
 
 main {
-  padding: 2.5rem 0 3rem;
+  padding: 0 0 3rem;
+}
+
+.home-main {
+  padding-top: 2.5rem;
 }
 
 .hero {
@@ -127,6 +144,38 @@ main {
   border: 1px solid var(--border);
   background: linear-gradient(145deg, #fff, #f9f5ef);
   border-radius: 1rem;
+}
+
+.home-feature {
+  margin: 0;
+}
+
+.home-feature--panoramic {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--surface);
+  /* ~top half of 4:3 artwork at full width → crop sits just under the nose */
+  aspect-ratio: 8 / 3;
+}
+
+.home-feature--panoramic img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
 }
 
 h1,
